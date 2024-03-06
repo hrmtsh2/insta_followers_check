@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "InstaFollowCheck",
+	"version": "1.0",
+	"description": "Compares followers and following lists.",
+	"permissions": ["tabs"],
+	"browser_action": {    	
+    	"default_title": "InstaFollowCheck",
+    	"default_popup": "index.html"
+  	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.instagram.com/*/followers/"],
+			"js": ["scripts/followers.js"]
+		}, 
+		{
+			"matches": ["https://www.instagram.com/*/following/"],
+			"js": ["scripts/following.js"]
+		}
+	],
+	"background": {
+		"scripts": ["scripts/background.js"]
+	}
+}
