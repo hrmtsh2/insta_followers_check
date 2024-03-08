@@ -20,4 +20,4 @@ setTimeout(() => {
 	browser.runtime.sendMessage({followers: usernames}, (response) => {
 		console.log("background.js says to followers.js - ", response);
 	});
-}, 20000);
+}, 60000);
